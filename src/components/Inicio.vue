@@ -3,8 +3,8 @@ import axios from 'axios';
 import { useRouter } from 'vue-router'; 
 import { onBeforeMount, ref } from 'vue';
 
-const router = useRouter();  // Desestructurar el hook useRouter
 
+const router = useRouter();  // Desestructurar el hook useRouter
 const userEmail = ref('');
 const userPassword = ref('');
 const lista = ref([]);
@@ -24,7 +24,7 @@ function atajo(event) {
     }
 }
 
-function click() {
+function comprobar() {
     // Acceder a los valores actuales de userEmail y userPassword
     const email = userEmail.value;
 
@@ -71,7 +71,7 @@ onBeforeMount(leerApi);
         Credenciales incorrectas. Por favor, inténtalo de nuevo.
       </div>
 
-      <button type="button" @click="click" class="btn btn-primary">Login</button>
+      <button type="button" @click="comprobar" class="btn btn-primary">Login</button>
     </form>
   </div>
 </template>
