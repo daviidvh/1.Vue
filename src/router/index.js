@@ -2,7 +2,7 @@ import EditarVue from '@/components/Editar.vue'
 import FavoritosVue from '@/components/Favoritos.vue'
 import InicioVue from '@/components/Inicio.vue'
 import UsuariosVue from '@/components/Usuarios.vue'
-import PostsVue from '@/components/PostsVue.vue'
+import PostsVue from '@/components/Posts.vue'
 
 
 import { createRouter, createWebHistory } from 'vue-router'

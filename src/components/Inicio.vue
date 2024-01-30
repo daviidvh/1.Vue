@@ -34,7 +34,7 @@ function click() {
     if (usuarioEncontrado) {
         console.log('ENCONTRADO');
         errorLogin.value = false;
-        router.push('/usuarios');  // Usar router en lugar de useRouter
+        router.push('/posts');  
     } else {
         errorLogin.value = true;
     }
