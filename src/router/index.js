@@ -1,5 +1,10 @@
+import EditarVue from '@/components/Editar.vue'
+import FavoritosVue from '@/components/Favoritos.vue'
 import InicioVue from '@/components/Inicio.vue'
 import UsuariosVue from '@/components/Usuarios.vue'
+import PostsVue from '@/components/PostsVue.vue'
+
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -11,9 +16,19 @@ const router = createRouter({
       component: InicioVue
     },
     {
-      path: '/usuarios',
-      name: 'Usuarios',
-      component: UsuariosVue
+      path: '/posts',
+      name: 'Posts',
+      component: PostsVue
+    },
+    {
+      path: '/favortios',
+      name: 'Favoritos',
+      component: FavoritosVue
+    },
+     {
+      path: '/editar',
+      name: 'Editar',
+      component: EditarVue
     },
 
   ]
