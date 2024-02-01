@@ -20,7 +20,7 @@ function atajo(event) {
         // Lógica que se ejecutará al presionar Ctrl+Alt+Enter
         console.log('Ctrl+Alt+Enter presionado');
         // Aquí puedes llamar a la función de autenticación u otra lógica que necesites
-        leerApi();
+        click();
     }
 }
 

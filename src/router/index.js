@@ -1,7 +1,6 @@
 import EditarVue from '@/components/Editar.vue'
 import FavoritosVue from '@/components/Favoritos.vue'
 import InicioVue from '@/components/Inicio.vue'
-import UsuariosVue from '@/components/Usuarios.vue'
 import PostsVue from '@/components/Posts.vue'
 
 
@@ -21,15 +20,14 @@ const router = createRouter({
       component: PostsVue
     },
     {
-      path: '/favortios',
+      path: '/favoritos',
       name: 'Favoritos',
       component: FavoritosVue
     },
      {
-      path: '/editar',
+      path: '/editar/:id',
       name: 'Editar',
-      component: EditarVue
-    },
+      component: EditarVue     },
 
   ]
 })
