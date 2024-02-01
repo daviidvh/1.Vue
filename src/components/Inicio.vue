@@ -3,8 +3,8 @@ import axios from 'axios';
 import { useRouter } from 'vue-router'; 
 import { onBeforeMount, ref } from 'vue';
 
-
 const router = useRouter();  // Desestructurar el hook useRouter
+
 const userEmail = ref('');
 const userPassword = ref('');
 const lista = ref([]);
@@ -20,11 +20,11 @@ function atajo(event) {
         // Lógica que se ejecutará al presionar Ctrl+Alt+Enter
         console.log('Ctrl+Alt+Enter presionado');
         // Aquí puedes llamar a la función de autenticación u otra lógica que necesites
-        leerApi();
+        click();
     }
 }
 
-function comprobar() {
+function click() {
     // Acceder a los valores actuales de userEmail y userPassword
     const email = userEmail.value;
 
@@ -34,7 +34,7 @@ function comprobar() {
     if (usuarioEncontrado) {
         console.log('ENCONTRADO');
         errorLogin.value = false;
-        router.push('/usuarios');  // Usar router en lugar de useRouter
+        router.push('/posts');  
     } else {
         errorLogin.value = true;
     }
@@ -71,7 +71,7 @@ onBeforeMount(leerApi);
         Credenciales incorrectas. Por favor, inténtalo de nuevo.
       </div>
 
-      <button type="button" @click="comprobar" class="btn btn-primary">Login</button>
+      <button type="button" @click="click" class="btn btn-primary">Login</button>
     </form>
   </div>
 </template>
