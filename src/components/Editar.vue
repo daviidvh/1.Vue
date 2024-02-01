@@ -23,11 +23,20 @@ console.log(lista)
 
 <template>
   <div>
-    <h2>Editar Post</h2>
-    <p>ID del Post: {{ postId }}</p>
-    <!-- Muestra los detalles del post, por ejemplo: -->
-    <p>Título: {{ lista.title }}</p>
-    <p>Cuerpo: {{ lista.body }}</p>
-    <!-- Agrega formularios u otras lógicas según tus necesidades -->
+    <h2>Editar Post {{ postId }}</h2>
+    <form @submit.prevent="guardarCambios">
+      <div class="mb-3">
+        <label for="titulo" class="form-label">Título:</label>
+        <input type="text" v-model="lista.title" class="form-control" id="titulo" required>
+      </div>
+      <div class="mb-3">
+        <label for="cuerpo" class="form-label">Cuerpo:</label>
+        <textarea v-model="lista.body" class="form-control" id="cuerpo" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+      <button type="submit" class="btn btn-danger">Eliminar</button>
+    </form>
   </div>
 </template>
+
+
