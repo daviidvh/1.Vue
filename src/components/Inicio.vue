@@ -45,33 +45,49 @@ onBeforeMount(leerApi);
 </script>
 
 <template>
-  <div @keydown="atajo">
-    <form>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          aria-describedby="emailHelp"
-          placeholder="Introduce tu email"
-          v-model="userEmail"
-        >
-        <small id="emailHelp" class="form-text text-muted">
-          Su privacidad es importante para nosotros. No compartiremos su correo electrónico con nadie.
-        </small>
-      </div>
+  <v-container style="height: 100%;">
+      <v-row class="justify-center align-center" style="height: 100%;">
+      <v-col lg="4">
+        <v-card >
+          <v-card-title class="text-h5 text-center">Inicio de Sesión</v-card-title>
 
-      <div class="form-group">
-        <label for="password">Contraseña</label>
-        <input type="password" class="form-control" id="password" placeholder="Tu contraseña" v-model="userPassword">
-      </div>
+          <v-card-text>
+            <v-form @keydown="atajo">
+              <v-text-field 
+                v-model="userEmail"
+                label="Email"
+                type="email"
+                required
+              ></v-text-field>
 
-      <div v-show="errorLogin" class="alert alert-danger" role="alert">
-        Credenciales incorrectas. Por favor, inténtalo de nuevo.
-      </div>
+              <v-text-field
+                v-model="userPassword"
+                label="Contraseña"
+                type="password"
+                required
+              ></v-text-field>
 
-      <button type="button" @click="click" class="btn btn-primary">Login</button>
-    </form>
-  </div>
+              <v-alert
+                v-if="errorLogin"
+                type="error"
+                
+              >
+                Credenciales incorrectas. Por favor, inténtalo de nuevo.
+              </v-alert>
+
+              <v-btn @click="click" color="primary" block>Iniciar Sesión</v-btn>
+            </v-form>
+          </v-card-text>
+        </v-card>
+      </v-col> 
+      </v-row> 
+  </v-container>
 </template>
+<style>
+html, body{
+  height: 100%;
+}
+#app{
+  height: 100%;
+}
+</style>
