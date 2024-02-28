@@ -101,6 +101,10 @@ function crearPost(){
   console.log(crearBody.value, crearTitulo.value)
   lista.value.push({body: crearBody.value, id: lista.value.length+1,title: crearTitulo.value,userId: 1 })
   console.log(lista.value)
+  cerrarCrear()
+  crearTitulo.value=''
+  crearBody.value=''
+  
 
 }
 

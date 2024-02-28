@@ -70,7 +70,7 @@ onBeforeMount(leerApi);
               <v-alert
                 v-if="errorLogin"
                 type="error"
-                
+
               >
                 Credenciales incorrectas. Por favor, inténtalo de nuevo.
               </v-alert>
